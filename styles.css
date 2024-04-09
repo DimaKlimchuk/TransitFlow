@@ -1,0 +1,85 @@
+/* DEFAULT SETTINGS */
+:root {
+  --dark-blue: #091242;
+  --dark-blue-1: #111c55;
+  --dark-blue-2: #273270;
+  --white: #ffffff;
+  --primary-font: "Rubic", sans-serif;
+  --secondary-font: "Crub", sans-serif;
+  --content-width: 1160px;
+  --pad-section: 0 20px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  font-family: var(--primary-font);
+}
+
+.container {
+  width: 100%;
+  max-width: var(--content-width);
+  padding: var(--pad-section);
+  display: flex;
+  margin: 0 auto;
+}
+
+.content {
+  width: 100%;
+  flex: 1;
+}
+
+/* HEADER */
+.info_header {
+  width: 100%;
+  background-color: var(--dark-blue);
+  padding: 46px 0;
+}
+
+.info_header .content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+}
+
+.logo_image {
+  width: 210px;
+  height: auto;
+}
+
+.icons_container,
+.icon_box {
+  display: flex;
+  align-items: center;
+  color: var(--white);
+}
+
+.icon_box {
+  gap: 16px;
+}
+
+.icons_container {
+  gap: 40px;
+}
+
+.icon_box__icon {
+  width: 62px;
+  height: 62px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--dark-blue-1);
+  border: 1px solid var(--dark-blue-2);
+  border-radius: 50%;
+}
+
+.icon_box__icon img {
+  width: 22px;
+  height: auto;
+  object-fit: contain;
+}
