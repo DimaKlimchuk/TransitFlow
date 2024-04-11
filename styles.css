@@ -156,7 +156,7 @@ header {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-image: url("images/home_hero.jpg");
+  background-image: url(".images/home_hero.jpg");
   font-family: var(--primary-font);
 }
 
