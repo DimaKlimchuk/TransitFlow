@@ -5,9 +5,14 @@
   --dark-blue-2: #273270;
   --white: #ffffff;
   --primary-font: "Rubic", sans-serif;
-  --secondary-font: "Crub", sans-serif;
+  --secondary-font: "Krub", sans-serif;
   --content-width: 1160px;
   --pad-section: 0 20px;
+  --yellow-gradient: linear-gradient(90deg, #ffb629, #ffda56, #ffd7a6);
+  --primary-font-size: 60px;
+  --sub-heading: 14px;
+  --text-font: 16px;
+  --accent-font: 16;
 }
 
 * {
@@ -17,23 +22,31 @@
 
 body {
   width: 100%;
-  font-family: var(--primary-font);
+  font-family: var(--secondary-font);
 }
 
 .container {
-  width: 100%;
+  width: calc(100% 2 * var(--pad-section));
   max-width: var(--content-width);
   padding: var(--pad-section);
   display: flex;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 .content {
   width: 100%;
   flex: 1;
+  display: flex;
 }
 
 /* HEADER */
+/* STATIC */
+header {
+  position: relative;
+  z-index: 9999;
+}
+
 .info_header {
   width: 100%;
   background-color: var(--dark-blue);
@@ -82,4 +95,192 @@ body {
   width: 22px;
   height: auto;
   object-fit: contain;
+}
+
+/* FIXED*/
+.nav_header {
+  font-family: var(--secondary-font);
+  background-color: rgba(9, 18, 66, 0.25);
+}
+
+.nav_header .content {
+  align-items: center;
+}
+
+.menu_list {
+  list-style-type: none;
+  padding: none;
+  display: flex;
+  gap: 30px;
+  color: var(--white);
+}
+
+.menu_item:not(:first-child) {
+  padding-left: 30px;
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.social_icons {
+  margin-left: auto;
+  display: flex;
+  gap: 24px;
+}
+
+.request_btn {
+  margin-left: 50px;
+  padding: 28px 50px;
+  border: 1px solid var(--white);
+  font-family: var(--secondary-font);
+  font-size: 16px;
+  font-weight: 600;
+  transition: 0.5s;
+}
+
+.social_icons .icon {
+  width: 100%;
+  height: 20px;
+  transition: 0.3s;
+}
+
+.social_icons .icon img {
+  object-fit: contain;
+}
+
+.social_icons .icon:hover {
+  transform: scale(1.05);
+}
+
+/* HOME HERO SECTION */
+.home_hero_section {
+  margin-top: -76px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url("images/home_hero.jpg");
+  font-family: var(--primary-font);
+}
+
+.home_hero_section .content {
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 250px 0 220px 0;
+  color: var(--white);
+  gap: 8px;
+}
+
+h3.sub_heading {
+  display: flex;
+  align-items: center;
+  background-color: rgba(4, 28, 55, 0.5);
+  padding-right: 9px;
+  font-size: 14px;
+  font-weight: 400;
+  height: 23px;
+  /* align-self: start; */
+}
+
+h3.sub_heading:before {
+  content: "";
+  width: 4px;
+  height: 100%;
+  margin-right: 9px;
+  background: var(--yellow-gradient);
+  display: inline-block;
+}
+
+.home_hero_section h1.heading {
+  font-size: var(--primary-font-size);
+  max-width: 500px;
+}
+
+.home_hero_section p.text {
+  max-width: 520px;
+  line-height: 1.5em;
+}
+
+.explore_btn {
+  margin-top: 16px;
+  padding: 19px 48px;
+  border: none;
+  background: var(--yellow-gradient);
+  font-size: var(--accent-font);
+  font-weight: 600;
+}
+
+/* HOME SECTION 1 */
+
+@media screen and (max-width: 1024px) {
+  .home_hero_section .content {
+    padding: 180px 0 150px 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .home_hero_section .content {
+    padding: 140px 0 100px 0;
+  }
+}
+
+/* ANIMATIONS */
+
+/* Common base class for fade-in animation */
+.fade-in {
+  opacity: 0;
+  transition: all 1s ease-in-out;
+}
+
+/* Fade-in animation */
+.fade-in.active {
+  opacity: 1;
+}
+
+/* Fade-in from top animation */
+.fade-in-top {
+  opacity: 0;
+  transform: translateY(-200px);
+  transition: all 1s ease-in-out;
+}
+
+/* Fade-in from top animation */
+.fade-in-top.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Fade-in from left animation */
+.fade-in-right {
+  opacity: 0;
+  transform: translateX(200px);
+  transition: all 1s ease-in-out;
+}
+
+/* Fade-in from left animation */
+.fade-in-right.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Fade-in from right animation */
+.fade-in-left {
+  opacity: 0;
+  transform: translateX(-200px);
+  transition: all 1s ease-in-out;
+}
+
+/* Fade-in from right animation */
+.fade-in-left.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.delay_03 {
+  transition: all 1s ease-in-out 0.3s;
+}
+
+.delay_06 {
+  transition: all 1s ease-in-out 0.6s;
+}
+
+.delay_09 {
+  transition: all 1s ease-in-out 0.9s;
 }
