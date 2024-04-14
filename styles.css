@@ -411,6 +411,14 @@ h2.heading {
   .home_hero_section .content {
     padding: 180px 0 150px 0;
   }
+
+  .fade-in-left,
+  .fade-in-right,
+  .fade-in-top,
+  .fade-in {
+    opacity: 1 !important;
+    transform: none !important;
+  }
 }
 
 @media screen and (max-width: 767px) {
