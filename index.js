@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
       .forEach(function (element) {
         if (isInViewport(element)) {
           element.classList.add("active");
+          console.log("class added");
         }
       });
   }
@@ -27,4 +28,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Listen for scroll events and trigger handleScroll function
   window.addEventListener("scroll", handleScroll);
+
+  var originalTopPos;
+
+  window.addEventListener("scroll", function () {
+    var element = document.querySelector(".nav_header");
+    var topPos = element.getBoundingClientRect().top;
+    // console.log(window.scrollY);
+
+    if (!originalTopPos) {
+      originalTopPos = element.getBoundingClientRect().top; // Set the original top position when it's not already set
+    }
+
+    if (window.scrollY > originalTopPos) {
+      element.classList.add("fixed");
+    } else if (window.scrollY <= originalTopPos) {
+      element.classList.remove("fixed");
+    }
+  });
 });
