@@ -18,7 +18,6 @@ document.addEventListener("DOMContentLoaded", function () {
       .forEach(function (element) {
         if (isInViewport(element)) {
           element.classList.add("active");
-          console.log("class added");
         }
       });
   }
@@ -29,20 +28,15 @@ document.addEventListener("DOMContentLoaded", function () {
   // Listen for scroll events and trigger handleScroll function
   window.addEventListener("scroll", handleScroll);
 
-  var originalTopPos;
-
+  var element = document.querySelector(".nav_header");
+  element.classList.remove("fixed");
+  const headerElement = document.getElementsByClassName("info_header")[0];
+  var topPos = headerElement.clientHeight;
+  // console.log(topPos);
   window.addEventListener("scroll", function () {
-    var element = document.querySelector(".nav_header");
-    var topPos = element.getBoundingClientRect().top;
-    // console.log(window.scrollY);
-
-    if (!originalTopPos) {
-      originalTopPos = element.getBoundingClientRect().top; // Set the original top position when it's not already set
-    }
-
-    if (window.scrollY > originalTopPos) {
+    if (window.scrollY > topPos) {
       element.classList.add("fixed");
-    } else if (window.scrollY <= originalTopPos) {
+    } else if (window.scrollY <= topPos) {
       element.classList.remove("fixed");
     }
   });
