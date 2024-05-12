@@ -1,4 +1,6 @@
 /* DEFAULT SETTINGS */
+@import url("https://fonts.googleapis.com/css2?family=Krub:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=League+Spartan:wght@100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
 :root {
   --black-1: #23212a;
   --black-2: #1c1f35;
@@ -10,6 +12,7 @@
   --border: #d8d8d8;
   --primary-font: "Rubic", sans-serif;
   --secondary-font: "Krub", sans-serif;
+  --third-font: "League Spartan", sans-serif;
   --content-width: 1160px;
   --pad-section: 0 20px;
   --yellow-gradient: linear-gradient(90deg, #ffb629, #ffda56, #ffd7a6);
@@ -51,8 +54,50 @@ a {
   color: inherit;
 }
 
+img {
+  width: 100%;
+}
+
+h2.heading {
+  font-size: var(--second-font-size);
+  font-family: var(--primary-font);
+}
+
+.paragraph {
+  color: var(--gray-1);
+}
+
+h3.sub_heading {
+  display: flex;
+  align-items: center;
+  background-color: rgba(4, 28, 55, 0.5);
+  padding-right: 9px;
+  font-size: 14px;
+  font-weight: 400;
+  height: 23px;
+  align-self: flex-start;
+}
+
+h3.sub_heading.light {
+  background-color: rgba(232, 232, 232, 0.5);
+}
+
+h3.sub_heading:before {
+  content: "";
+  width: 4px;
+  height: 100%;
+  margin-right: 9px;
+  background: var(--yellow-gradient);
+  display: inline-block;
+}
+
+/* */
+/* */
 /* HEADER */
 /* STATIC */
+/* */
+/* */
+
 header {
   position: relative;
   z-index: 9999;
@@ -76,22 +121,22 @@ header {
   height: auto;
 }
 
-.icons_container,
-.icon_box {
+.info_header .icons_container,
+.info_header .icon_box {
   display: flex;
   align-items: center;
   color: var(--white);
 }
 
-.icon_box {
+.info_header .icon_box {
   gap: 16px;
 }
 
-.icons_container {
+.info_header .icons_container {
   gap: 40px;
 }
 
-.icon_box__icon {
+.info_header .icon_box__icon {
   width: 62px;
   height: 62px;
   display: flex;
@@ -102,7 +147,7 @@ header {
   border-radius: 50%;
 }
 
-.icon_box__icon img {
+.info_header .icon_box__icon img {
   width: 22px;
   height: auto;
   object-fit: contain;
@@ -368,29 +413,6 @@ nav.mobile_menu .m-menu__checkbox:checked ~ .m-menu {
   gap: 8px;
 }
 
-h3.sub_heading {
-  display: flex;
-  align-items: center;
-  background-color: rgba(4, 28, 55, 0.5);
-  padding-right: 9px;
-  font-size: 14px;
-  font-weight: 400;
-  height: 23px;
-}
-
-h3.sub_heading.light {
-  background-color: rgba(232, 232, 232, 0.5);
-}
-
-h3.sub_heading:before {
-  content: "";
-  width: 4px;
-  height: 100%;
-  margin-right: 9px;
-  background: var(--yellow-gradient);
-  display: inline-block;
-}
-
 .home_hero_section h1.heading {
   font-size: var(--primary-font-size);
   max-width: 500px;
@@ -425,9 +447,18 @@ h3.sub_heading:before {
   transform: scale(0.95);
 }
 
-/* HOME SECTION 1 */
+/************* HOME SECTION 1 *************/
+
+:is(.home_section_1, .home_section_3) h2.heading {
+  color: var(--black-2);
+}
+
 .home_section_1 {
   margin: 96px 0 120px 0;
+}
+
+.home_section_1 .content {
+  gap: 40px;
 }
 
 .home_section_1 .heading_container {
@@ -441,6 +472,15 @@ h3.sub_heading:before {
 
 .home_section_1 .services.icons_container {
   width: 70%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 70px 40px;
+}
+
+.home_section_1 .service img {
+  width: 60px;
+  object-fit: contain;
+  min-width: 60px;
 }
 
 .home_section_1 .service .heading {
@@ -460,17 +500,133 @@ h3.sub_heading:before {
 .home_section_1 .service .service_content {
   border-left: 1px solid var(--border);
   padding-left: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .home_section_1 .service {
   flex: 1 1 calc(50% - 40px);
+  gap: 30px;
 }
 
-h2.heading {
-  font-size: var(--second-font-size);
+/* */
+/* */
+/*********** HOME SECTION 2 *******************/
+/* */
+/* */
+
+.home_section_2 {
+  background-image: url(images/home_bg_1.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+}
+
+/* */
+/* */
+/*********** HOME SECTION 3 *******************/
+/* */
+/* */
+.home_section_3 .container {
+  overflow: visible;
+}
+.home_section_3 .content {
+  padding: 85px;
+  background-color: var(--white);
+  margin-top: -150px;
+  z-index: 10;
+  flex-direction: column;
+}
+
+.why_us {
+  display: flex;
+  justify-content: space-between;
+  gap: 80px;
+}
+
+.why_us .container_inner {
+  flex: 1 1 calc(50% - 40px);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.why_us .icons_container {
+  margin-top: 12px;
+  display: flex;
+  gap: 22px;
+  flex-direction: column;
+  align-items: start;
+  color: var(--black-2);
+}
+
+.why_us .icon_box {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.why_us .icon_box img {
+  width: 58px;
+}
+
+.why_us .cover_image {
+  width: 70%;
+  margin: -40% 0 0 -15%;
+}
+
+.numbers_about_us {
+  margin-top: 110px;
+  display: flex;
+}
+
+.numbers_about_us .number_box {
+  display: flex;
+  border: 1px solid #d4d4d4;
+  justify-content: center;
+  align-items: center;
+  flex: 1 1 50%;
+  gap: 16px;
+  height: 140px;
+}
+
+.numbers_about_us .number_box:first-child {
+  border-width: 1px 1px 1px 0;
+}
+
+.numbers_about_us .number_box:nth-child(2) {
+  border-width: 1px 0px;
+}
+
+.numbers_about_us .number_box h3.number {
+  font-size: 50px;
+  font-weight: 600;
+  font-family: var(--primary-font);
+  color: var(--black-2);
+}
+
+.numbers_about_us .number_box .divider {
+  width: 17px;
+  height: 17px;
+  background: var(--yellow-gradient);
+}
+
+.numbers_about_us .number_box_text {
+  font-size: 20px;
+  font-family: var(--third-font);
+  color: var(--black-2);
 }
 
 @media screen and (max-width: 1024px) {
+  .fade-in-left,
+  .fade-in-right,
+  .fade-in-top,
+  .fade-in {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
   .info_header .icons_container {
     display: none;
   }
@@ -494,12 +650,9 @@ h2.heading {
     padding: 180px 0 150px 0;
   }
 
-  .fade-in-left,
-  .fade-in-right,
-  .fade-in-top,
-  .fade-in {
-    opacity: 1 !important;
-    transform: none !important;
+  /*********** HOME SECTION 2 *******************/
+  .home_section_2 {
+    height: 400px;
   }
 }
 
@@ -518,6 +671,33 @@ h2.heading {
 
   .nav_header .request_btn {
     display: none;
+  }
+
+  /* HOME SECTION-1 */
+  .home_section_1 .content {
+    flex-direction: column;
+  }
+
+  .home_section_1 :is(.services.icons_container, .heading_container) {
+    width: 100%;
+  }
+
+  .home_section_1 .services.icons_container {
+    gap: 30px;
+  }
+
+  .home_section_1 .service {
+    flex: 1 1 100%;
+  }
+
+  .home_section_1 .service img {
+    width: 50px;
+    min-width: 50px;
+  }
+
+  /*********** HOME SECTION 2 *******************/
+  .home_section_2 {
+    height: 300px;
   }
 }
 
