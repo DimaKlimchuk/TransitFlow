@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transit Flow</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="info_header">
+        <div class="container">
+          <div class="content">
+            <img class="logo_image" src="./images/Logo.png" alt="logo" />
+            <div class="icons_container">
+              <div class="icon_box">
+                <div class="icon_box__icon">
+                  <img src="./images/clock_icon.svg" alt="clock_icon" />
+                </div>
+
+                <p class="icon_box__text">
+                  Mon - Sat 9.00 - 18.00 <br />Sunday Closed
+                </p>
+              </div>
+              <div class="icon_box">
+                <div class="icon_box__icon">
+                  <img src="./images/mail_icon.svg" alt="mail_icon" />
+                </div>
+
+                <p class="icon_box__text">Email <br />contact@logistics.com</p>
+              </div>
+              <div class="icon_box">
+                <div class="icon_box__icon">
+                  <img src="./images/phone_icon.svg" alt="phone_icon" />
+                </div>
+                <p class="icon_box__text">Call Us <br />(00) 112 365 489</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="nav_header">
+        <div class="container">
+          <div class="content">
+
+            <nav class="desktop-menu">
+              <ul class="menu_list">
+                <li class="menu_item"><a href="./Home.html">Home</a></li>
+                <li class="menu_item"><a href="#">About</a></li>
+                <li class="menu_item"><a href="#">Pages</a></li>
+                <li class="menu_item"><a href="#">Project</a></li>
+                <li class="menu_item"><a href="#">Contact</a></li>
+              </ul>
+            </nav>
+            <nav class="mobile_menu">
+              <input type="checkbox" id="menu" name="menu" class="m-menu__checkbox">
+              <label class="m-menu__toggle" for="menu">
+                <svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="butt" stroke-linejoin="arcs"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+              </label>
+              <label class="m-menu__overlay" for="menu"></label>
+            
+              <div class="m-menu">
+                <div class="m-menu__header">
+                  <label class="m-menu__toggle" for="menu">
+                    <svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="butt" stroke-linejoin="arcs">
+                      <line x1="18" y1="6" x2="6" y2="18"></line>
+                      <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                  </label>
+                  <span>MENU</span>
+                </div>
+                <ul>
+                  <li><a href="./Home.html">Home</a></li>
+                  <li><a href="#">About</a></li>
+                  <li>
+                    <label class="a-label__chevron" for="item-2">Item 2</label>
+                    <input type="checkbox" id="item-2" name="item-2" class="m-menu__checkbox">
+                    <div class="m-menu">
+                      <div class="m-menu__header">
+                        <label class="m-menu__toggle" for="item-2">
+                          <svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="butt" stroke-linejoin="arcs">
+                            <path d="M19 12H6M12 5l-7 7 7 7"/>
+                          </svg>
+                        </label>
+                        <a href="#">Pages</a>
+                      </div>
+                      <ul>
+                        <li><label>Item 2.1</label></li>
+                        <li><label>Item 2.2</label></li>
+                        <li>
+                          <label class="a-label__chevron" for="item-2-3">Item 2.3</label>
+                          <input type="checkbox" id="item-2-3" name="item-2" class="m-menu__checkbox">
+                          <div class="m-menu">
+                            <div class="m-menu__header">
+                              <label class="m-menu__toggle" for="item-2-3">
+                                <svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="butt" stroke-linejoin="arcs">
+                                  <path d="M19 12H6M12 5l-7 7 7 7"/>
+                                </svg>
+                              </label>
+                              <span>Item 2.3 </span>
+                            </div>
+                            <ul>
+                              <li><label>Item 2.3.1</label></li>
+                              <li><label>Item 2.3.2</label></li>
+                              <li><label>Item 2.3.3</label></li>
+                              <li><label>Item 2.3.4</label></li>
+                              <li><label>Item 2.3.5</label></li>
+                            </ul>                
+                        </li>
+                        <li><label>Item 2.4</label></li>
+                        <li><label>Item 2.5</label></li>
+                        <li><label>Item 2.6</label></li>
+                        <li><label>Item 2.7</label></li>
+                        <li><label>Item 2.8</label></li>
+                        <li><label>Item 2.9</label></li>
+                    </div>
+                  </li>
+                  <li><a href="#">Project</a></li>
+                  <li><a href="#">Contact</a></li>
+                </ul>  
+              </div>
+            </nav>
+            <div class="social_icons">
+              <a class="icon" href="https://www.instagram.com/" target="_blank"
+                ><img src="./images/Instagram_icon.svg" alt="Instagram icon"
+              /></a>
+              <a class="icon" href="https://www.facebook.com/" target="_blank"
+                ><img src="./images/facebook_icon.svg" alt="Facebook icon"
+              /></a>
+              <a class="icon" href="https://twitter.com/" target="_blank"
+                ><img
+                  class="icon"
+                  src="./images/Twitter.svg"
+                  alt="Twitter icon"
+              /></a>
+              <a class="icon" href="https://www.linkedin.com/" target="_blank"
+                ><img
+                  class="icon"
+                  src="./images/Linkdin.svg"
+                  alt="Linkedin icon"
+              /></a>
+            </div>
+
+            <a href="#" class="request_btn">Request Quote</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="home_hero_section">
+        <div class="container">
+          <div class="content">
+            <h3 class="sub_heading fade-in-left">
+              Logistics & Supply Chain Solutions
+            </h3>
+            <h1 class="heading fade-in-left delay_03">
+              Your Gateway to any Destination in the World
+            </h1>
+            <p class="text fade-in-left delay_06">
+              In augue ligula, feugiat ut nulla consequat. Ut est lacus,
+              molestie in arcu no, iaculis vehicula ipsum. Nunc faucibus, nisl
+              id dapibus finibus, enim diam interdum nulla, sed laoreet risus
+              lectus.
+            </p>
+            <a href="#" class="explore_btn fade-in-left delay_09">
+              Explore More
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="home_section_1">
+        <div class="container">
+          <div class="content">
+            <div class="heading_container">
+              <h3 class="sub_heading light fade-in-left">What We Do</h3>
+              <h2 class="heading fade-in-left delay_03">
+                Safe & Reliable Cargo Solutions
+              </h2>
+            </div>
+            <div class="services icons_container">
+              <div class="service">
+                <img alt="icon" src="images/Sea Transport Services.svg" />
+                <div class="service_content">
+                  <h4 class="heading">Sea Transport Services</h4>
+                  <p class="paragraph">
+                    Following the quality of our service thus having gained trust of our many clients.
+                  </p>
+                </div>
+              </div>
+              <div class="service">
+                <img alt="icon" src="images/Warehousing Services.svg" />
+                <div class="service_content">
+                  <h4 class="heading">Warehousing Services</h4>
+                  <p class="paragraph">
+                    Following the quality of our service thus having gained trust of our many clients.
+                  </p>
+                </div>
+              </div>
+              <div class="service">
+                <img alt="icon" src="images/Air Fright Services.svg" />
+                <div class="service_content">
+                  <h4 class="heading">Air Fright Services</h4>
+                  <p class="paragraph">
+                    Following the quality of our service thus having gained trust of our many clients.
+                  </p>
+                </div>
+              </div>
+              <div class="service">
+                <img alt="icon" src="images/Local Shipping Services.svg" />
+                <div class="service_content">
+                  <h4 class="heading">Local Shipping Services</h4>
+                  <p class="paragraph">
+                    Following the quality of our service thus having gained trust of our many clients.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="home_section_2">
+      </section>
+      <section class="home_section_3">
+        <div class="container">
+          <div class="content">
+            <div class="why_us">
+              <div class="container_inner">
+                <h3 class="sub_heading light fade-in-left">Why Us</h3>
+              <h2 class="heading fade-in-left delay_03">
+                We provide full range global logistics solution
+              </h2>
+              <p class="paragraph">
+                Leverage agile frameworks to provide a robust synopsis for strategy foster collaborative thinking to further the overall value proposition.<br/><br/>
+Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
+              </p>
+              <div class="icons_container">
+                <div class="icon_box">
+                  <img alt="icon" src="images/delivery_on_time.svg" />
+                  <div class="icon_box_content">
+                    <h4 class="heading">Delivery on Time</h4>
+                  </div>
+                </div>
+                <div class="icon_box">
+                  <img alt="icon" src="images/optimized_travel_cost.svg" />
+                  <div class="icon_box_content">
+                    <h4 class="heading">Optimized Travel Cost</h4>
+                  </div>
+                </div>
+              </div>
+
+
+              </div>
+              <div class="container_inner">
+                <img alt="airplane" src="images/why_us_image_1.jpg"/>
+                <img class="cover_image" alt="airplane" src="images/why_us_image_2.png"/>
+              </div>
+            </div>
+            <div class="numbers_about_us">
+              <div class="number_box">
+                <h3 class="number">1294</h3>
+                <div class="divider"></div>
+                <p class="number_box_text">Delivered Packages</p>
+              </div>
+              <div class="number_box">
+                <h3 class="number">3594</h3>
+                <div class="divider"></div>
+                <p class="number_box_text">Satisfied Clients</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="home_section_4">
+        <div class="container">
+          <div class="content">
+            <h2 class="heading fade-in-left delay_03">
+              Transporting Across The World
+            </h2>
+            <div class="works">
+              <div class="work">
+                <h3 class="heading">Liquid Transportation</h3>
+                <p class="paragraph">Premium Tankers</p>
+              </div>
+              <div class="work">
+                <h3 class="heading">Packaging Solutions</h3>
+                <p class="paragraph">Warehouse Management</p>
+              </div>
+              <div class="work">
+                <h3 class="heading">Contract Logistics</h3>
+                <p class="paragraph">Road Transportation</p>
+              </div>
+              <div class="work">
+                <h3 class="heading">Warehouse & Distribution</h3>
+                <p class="paragraph">Large Warehouse</p>
+              </div>
+              <div class="work">
+                <h3 class="heading">Specialized Transport</h3>
+                <p class="paragraph">Ocean Transports</p>
+              </div>
+            </div>
+            <a class="btn type_1 more_work" href="/#">More Work</a>
+          </div>
+        </div>
+      </section>
+      <section class="home_section_5">
+      </section>
+      <section class="home_section_8">
+        <div class="container">
+          <div class="content">
+            <h3 class="sub_heading light fade-in-left">What We Do</h3>
+            <h2 class="heading fade-in-left delay_03">
+              Transporting Across The World
+            </h2>
+            <div class="team">
+              <div class="team_member">
+                <img src="images/Jessca Arow.jpg" alt="person"/>
+                
+                <div class="member_info">
+                  <div class="member_socials">
+                    <a class="link"><img src="images/linkedin_black.svg" alt="icon"/></a>
+                    <a class="link"><img src="images/twitter_black.svg" alt="icon"/></a>
+                    <a class="link"><img src="images/facebook_black.svg" alt="icon"/></a>
+                    <a class="link"><img src="images/instagram_black.svg" alt="icon"/></a>
+                    
+                  </div>
+                  <h3 class="heading">Jessca Arow</h3>
+                <p class="paragraph">Designer</p>
+                </div>
+                
+                
+              </div>
+              <div class="team_member">
+                <img src="images/Kathleen Smith.jpg" alt="person"/>
+                
+                <div class="member_info">
+                  <div class="member_socials">
+                    <a class="link"><img src="images/linkedin_black.svg" alt="icon"/></a>
+                    <a class="link"><img src="images/twitter_black.svg" alt="icon"/></a>
+                    <a class="link"><img src="images/facebook_black.svg" alt="icon"/></a>
+                    <a class="link"><img src="images/instagram_black.svg" alt="icon"/></a>
+                    
+                  </div>
+                  <h3 class="heading">Kathleen Smith</h3>
+                <p class="paragraph">Designer</p>
+                </div>
+                
+                
+              </div>
+              <div class="team_member">
+                <img src="images/Rebecca Tylor.jpg" alt="person"/>
+                
+                <div class="member_info">
+                  <div class="member_socials">
+                    <a class="link"><img src="images/linkedin_black.svg" alt="icon"/></a>
+                    <a class="link"><img src="images/twitter_black.svg" alt="icon"/></a>
+                    <a class="link"><img src="images/facebook_black.svg" alt="icon"/></a>
+                    <a class="link"><img src="images/instagram_black.svg" alt="icon"/></a>
+                    
+                  </div>
+                  <h3 class="heading">Rebecca Tylor</h3>
+                <p class="paragraph">Designer</p>
+                </div>
+                
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer></footer>
+    <script src="index.js"></script>
+  </body>
+</html>

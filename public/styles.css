@@ -101,6 +101,30 @@ h3.sub_heading:before {
   transition: 0.5s;
 }
 
+.btn.type_2 {
+  margin-top: 16px;
+  padding: 19px 48px;
+  border: none;
+  background: linear-gradient(
+    90deg,
+    #ffb629,
+    #ffda56,
+    #f8e8d3,
+    #ffda56,
+    #ffb629
+  );
+  color: var(--black-1);
+  font-size: var(--accent-font);
+  font-weight: 600;
+  background-size: 150% 150%;
+  animation: gradientAnimation 5s infinite;
+  transition: all 0.5s;
+}
+
+.btn.type_2:hover {
+  transform: scale(0.95);
+}
+
 .btn:hover {
   background-color: transparent;
   color: var(--dark-blue);
@@ -764,14 +788,62 @@ nav.mobile_menu .m-menu__checkbox:checked ~ .m-menu {
 
 .team {
   width: 100%;
+  display: flex;
+  gap: 50px;
+}
+
+.team .team_member {
+  display: flex;
+  flex-direction: column;
+}
+
+.team .team_member > img {
+  height: 420px;
+  object-fit: cover;
 }
 
 .team .team_member .member_info {
+  padding: 42px 34px 20px 34px;
+  background-color: var(--black-2);
+  color: var(--white);
+}
+
+.team .team_member .member_info .paragraph {
+  color: var(--white);
+}
+
+.team .team_member .member_info {
+  position: relative;
+}
+
+.team .member_socials {
+  padding: 20px 16px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateY(-50%);
+  background: linear-gradient(0deg, #ffb629 0%, #ffda56 51%, #ffd7a6 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+
+.team .member_socials .link {
+  display: flex;
 }
 
 .team .member_socials .link img {
-  width: 20px;
+  width: 22px;
 }
+
+/*  */
+/*  */
+/*  */
+/**************************  404 PAGE  ********************************/
+/*  */
+/*  */
+/*  */
 
 @media screen and (max-width: 1279px) {
   /* SECTION-4 */
