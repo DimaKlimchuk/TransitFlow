@@ -1,8 +1,11 @@
 const express = require("express");
+const bodyParser = require("body-parser");
+const nodemailer = require("nodemailer");
 const app = express();
 
 // Вказуємо Express використовувати папку 'public' для статичних файлів
 app.use(express.static("public"));
+app.use(bodyParser.json());
 
 // Стартовий маршрут ('/') буде автоматично відображати index.html
 app.get("/", (req, res) => {

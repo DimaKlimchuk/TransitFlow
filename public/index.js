@@ -1,3 +1,16 @@
+import Swiper from "swiper/bundle";
+import "swiper/swiper-bundle.min.css";
+
+const swiper = new Swiper(".swiper-container", {
+  // Опції Swiper
+  direction: "horizontal",
+  loop: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
+
 document.addEventListener("DOMContentLoaded", function () {
   // Function to check if an element is in the viewport
   function isInViewport(element) {
